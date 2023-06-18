@@ -1,10 +1,12 @@
 import React from "react";
 import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
-export default function BotaoEntrar() {
+import { useNavigation } from "@react-navigation/native";
 
+export default function BotaoEntrar() {
+    const navigation = useNavigation();
     return (
         <View style={estilos.container}>
-            <TouchableOpacity style={estilos.botao}>
+            <TouchableOpacity style={estilos.botao} onPress={() => navigation.navigate('Login')}>
                 <Text style={estilos.textoBotao}>Entrar</Text>
             </ TouchableOpacity>
         </View>

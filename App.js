@@ -1,11 +1,18 @@
 import React from 'react';
-import { View, NavigationContainer } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 
-import AppRotas from './src/rotas/appRotas';
+import RotaStack from './src/rotas/stackRotas';
+import RotaTab from './src/rotas/tabRotas';
 
 export default function App() {
-  return <AppRotas />;
+  return (
+    <>
+      <NavigationContainer>
+        <RotaStack />
+      </NavigationContainer>
+    </>
+  )
 }
 
