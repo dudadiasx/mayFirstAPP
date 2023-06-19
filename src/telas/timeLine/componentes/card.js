@@ -1,9 +1,11 @@
 import React from "react";
 import { StyleSheet, View, SafeAreaView, StatusBar, Text, TextInput, Image, TouchableOpacity, Dimensions  } from "react-native";
 import carrinhoBB from "../../../../assets/carrinhoBB.webp";
+import { useNavigation } from "@react-navigation/native";
 
 const width = Dimensions.get("screen").width;
 export default function Card() {
+    const navigation = useNavigation();
     return (
         <View style={estilos.conteiner}>
             <Image style={estilos.image} source={carrinhoBB} />
@@ -15,7 +17,7 @@ export default function Card() {
                     Estado: São Paulo{"\n"}
                     CEP: 01234-567
                 </Text>
-                <TouchableOpacity style={estilos.button} onPress={() => {}}>
+                <TouchableOpacity style={estilos.button} onPress={() => navigation.navigate('SaibaMais')}>
                     <Text style={estilos.textButton}>VEJA MAIS</Text>
                 </TouchableOpacity>
             </View>
