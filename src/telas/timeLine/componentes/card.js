@@ -28,11 +28,11 @@ export default function Card() {
 const estilos = StyleSheet.create({
     conteiner: {
         marginTop: 30,
-        marginHorizontal: 15,
+        marginHorizontal: '2%',
         flexDirection: 'row',
         backgroundColor: "#fff",
         borderRadius: 30,
-        padding: 10,
+        padding: '2%',
         elevation: 3,
     },
     image: {

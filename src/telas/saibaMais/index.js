@@ -39,13 +39,13 @@ const estilos = StyleSheet.create({
     }, 
     image: {
         width: "90%", 
-        height: (1031 / 1040) * width * 0.8,
+        height: (1031 / 1040) * width * 0.7,
         alignSelf: "center",
     },
     textoTitulo: {
         fontWeight: "bold",
         fontSize: 24,
-        marginBottom: 10,
+        marginBottom: "1%",
     },
     textoDescricao: {
         textAlign: "justify",
@@ -53,14 +53,14 @@ const estilos = StyleSheet.create({
     textoPreco: {
         fontSize: 20,
         fontWeight: "bold",
-        marginTop: 10,
+        marginTop: '1%',
     },
     button: {
         backgroundColor: "#FFB2F2",
         alignItems: "center",
         paddingVertical: 10,
         borderRadius: 12,
-        marginTop: "5%",
+        marginTop: "1%",
     },
     textButton: {
         color: "#4F4F4F",

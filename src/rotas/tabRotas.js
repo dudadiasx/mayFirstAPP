@@ -3,14 +3,16 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 import TimeLine from '../telas/timeLine/index';
-
-
+import Vender from '../telas/vender/index'
+import Profile from '../telas/profile/index';
+import ChatUser from '../telas/chat/chat'
 
 const Tab = createBottomTabNavigator();        
 
 export default function RotaTab() {
   return (
       <Tab.Navigator
+        initialRouteName='Home'
         screenOptions={({ route }) => ({
           tabBarStyle: { 
             backgroundColor: '#FFB2F2', 
@@ -44,10 +46,10 @@ export default function RotaTab() {
           tabBarInactiveTintColor: 'gray',
         })}
       > 
-        <Tab.Screen name="Chat" component={TimeLine} options={{ headerShown: false }}/>   
+        <Tab.Screen name="Chat" component={ChatUser} options={{ headerShown: false }}/>   
         <Tab.Screen name="Home" component={TimeLine} options={{ headerShown: false }}/>
-        <Tab.Screen name="Vender" component={TimeLine} options={{ headerShown: false}}/>
-        <Tab.Screen name="Perfil" component={TimeLine} options={{ headerShown: false }}/>
+        <Tab.Screen name="Vender" component={Vender} options={{ headerShown: false}}/>
+        <Tab.Screen name="Perfil" component={Profile} options={{ headerShown: false }}/>
       </Tab.Navigator>
   );
 }
